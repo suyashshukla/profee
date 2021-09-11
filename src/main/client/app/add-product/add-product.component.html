@@ -1,0 +1,22 @@
+<div class="modal-header bg-secondary text-white">
+    <span class="lead" *ngIf="!isUpdateOperation">Add Product</span>
+    <span class="lead" *ngIf="isUpdateOperation">Update Product</span>
+</div>
+<div class="modal-body w-75 mx-auto" [formGroup]="productForm">
+
+    <input type="text" placeholder="Product Name" class="form-control" formControlName="name">
+    <span class="text-danger" *ngIf="hasErrors(productForm.get('name'))">Invalid Input</span>
+
+    <div class="input-group mt-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">INR</span>
+        </div>
+        <input type="number" placeholder="Price" class="form-control" formControlName="price">
+    </div>
+    <span class="text-danger" *ngIf="hasErrors(productForm.get('price'))">Invalid Input</span>
+
+    <div class="d-flex justify-content-end mt-3">
+        <button class="btn btn-success me-2" (click)="saveProduct()">{{isUpdateOperation?'UPDATE':'ADD'}}</button>
+        <button class="btn btn-danger" (click)="closeModal()">CLOSE</button>
+    </div>
+</div>

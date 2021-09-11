@@ -1,0 +1,92 @@
+<div class="w-100 p-4 bg-secondary text-white shadow shadow-sm border-bottom">
+  <div class="logo">profee</div>
+  <span>Product Feedback Portal</span>
+</div>
+
+<div class="m-4">
+  <div class="alert alert-warning" *ngIf="!isProductsPresent">No Products Added. Please <span
+      class="text-info cursor-pointer" (click)="addProduct()">click here</span> to
+    add a
+    new product!
+  </div>
+
+  <div class="row" *ngIf="isProductsPresent">
+
+    <div class="col-sm-3 mt-1">
+      <div class="card">
+        <div class="card-header">
+          <div class="d-flex justify-content-between">
+            <span>Products</span>
+            <span class="text-info cursor-pointer" (click)="addProduct()">Add Product</span>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div *ngFor="let product of products; last as isLast" class="p-3 cursor-pointer"
+            [ngClass]="{'border-bottom':isLast,'bg-light': isSelected(product)}"
+            (click)="changeSelectedProduct(product)">
+            <div class="heading">{{product.name}}</div>
+            <div class="text-danger">{{product.price | currency : 'INR' : 'symbol'}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-9 mt-1">
+      <div class="card">
+        <div class="card-header">
+          <div class="d-flex justify-content-between">
+            <div>
+              <div class="lead mb-1">{{selectedProduct.name}}</div>
+              <div class="text-danger">{{selectedProduct.price | currency : 'INR' : 'symbol'}}</div>
+              <div class="text-secondary">{{feedbacks.length}} Reviews</div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="text-info cursor-pointer my-auto" (click)="editProduct()">
+                Edit Product
+              </div>
+              <span class="mx-1 my-auto">|</span>
+              <div class="text-info cursor-pointer my-auto" (click)="deleteProduct()">
+                Delete Product
+              </div>
+              <span class="mx-1 my-auto">|</span>
+              <div class="text-info cursor-pointer my-auto" (click)="addFeedback()">
+                Add Feedback
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div *ngIf="feedbacks.length==0" class="alert alert-warning m-2">
+            No feedbacks avaialble for the selected product.
+          </div>
+          <div *ngFor="let feedback of feedbacks; last as isLast" [ngClass]="{'border-bottom':!isLast}" class="p-3">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex">
+                <div class="heading">
+                  <span>{{feedback.title}}</span>
+                </div>
+                <span class="badge ms-2 d-flex align-items-center"
+                  [ngClass]="feedback.rating<3?'bg-danger':(feedback.rating<4?'bg-warning':'bg-success')">{{feedback.rating}}/5</span>
+              </div>
+              <div class="d-flex justify-content-between">
+
+                <div class="text-info cursor-pointer" (click)="editFeedback(feedback)">Edit Feedback</div>
+                <span class="mx-1 my-auto">|</span>
+                <div class="text-info cursor-pointer" (click)="deleteFeedback(feedback.id)">Delete Feedback</div>
+              </div>
+            </div>
+            <div class="text-secondary">
+              <i>"{{feedback.content}}"</i>
+            </div>
+            <div class="d-flex align-items-end">
+              {{feedback.givenBy}} on {{feedback.givenOn | date : 'dd MMM, yyyy'}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<ng-http-loader [entryComponent]="progressSpinner" [opacity]="'1'" [backdropBackgroundColor]="'#00000040'"
+  [filteredUrlPatterns]="['/api/post/appreciate','/api/post/propel','/api/dashboard/userslookup']"></ng-http-loader>
