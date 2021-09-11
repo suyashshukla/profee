@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.application</groupId>
-	<artifactId>profee</artifactId>
+	<artifactId>profee.app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>profee</name>
+	<name>profee.app</name>
 	<description>Server Side App for PROFEE</description>
 	<properties>
 		<java.version>11</java.version>
