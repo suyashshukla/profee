@@ -1,7 +1,6 @@
 package com.application.profee.controllers;
 
 import com.application.profee.data.Product;
-import com.application.profee.repositories.ProductRepository;
 import com.application.profee.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
