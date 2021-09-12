@@ -8,7 +8,16 @@ spring:
     databaseName: profee
     username: suyash
     password: sushandro
+  application:
+    name: profee.product
 
 server:
   port: 2000
 
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:5000/eureka}
+  instance:
+    preferIpAddress: true

@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="profee.app" />
+        <module name="profee.eureka" />
         <module name="profee.feedback" />
+        <module name="profee.app" />
         <module name="profee.product" />
       </profile>
     </annotationProcessing>
@@ -15,6 +16,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="profee.app" options="-parameters" />
+      <module name="profee.eureka" options="-parameters" />
       <module name="profee.feedback" options="-parameters" />
       <module name="profee.product" options="-parameters" />
     </option>

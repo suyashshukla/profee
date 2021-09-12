@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/profee.app/pom.xml" />
         <option value="$PROJECT_DIR$/profee.feedback/pom.xml" />
         <option value="$PROJECT_DIR$/profee.product/pom.xml" />
+        <option value="$PROJECT_DIR$/profee.eureka/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,9 @@
+server:
+  port: 5000
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  environment: Development
+  datacenter: None

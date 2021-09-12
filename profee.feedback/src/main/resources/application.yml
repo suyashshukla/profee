@@ -9,6 +9,18 @@ spring:
     username: suyash
     password: sushandro
 
+  application:
+     name: profee.feedback
+
 server:
   port: 1000
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:5000/eureka}
+  instance:
+    preferIpAddress: true
+
 

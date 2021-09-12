@@ -8,11 +8,23 @@ spring:
     databaseName: profee
     username: suyash
     password: sushandro
+  application:
+    name: profee.app
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:5000/eureka}
+  instance:
+    preferIpAddress: true
 
 zuul:
-  prefix: /api
   routes:
     feedback:
-      url: http://localhost:1000/api/feedback
+      path: /api/feedback/**
+      stripPrefix: false
+      serviceId: profee.feedback
     product:
-      url: http://localhost:2000/api/product
+      path: /api/product/**
+      stripPrefix: false
+      serviceId: profee.product
