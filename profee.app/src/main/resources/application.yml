@@ -8,3 +8,11 @@ spring:
     databaseName: profee
     username: suyash
     password: sushandro
+
+zuul:
+  prefix: /api
+  routes:
+    feedback:
+      url: http://localhost:1000/api/feedback
+    product:
+      url: http://localhost:2000/api/product

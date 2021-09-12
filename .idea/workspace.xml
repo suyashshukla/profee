@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51c56c1b-6de9-4017-973d-88f94e82b95c" name="Changes" comment="Migrated entity specific files to corresponding applications">
+    <list default="true" id="51c56c1b-6de9-4017-973d-88f94e82b95c" name="Changes" comment="Added proxy conf to the client application">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profee.app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profee.app/src/main/java/com/application/profee/initializer/ProfeeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/profee.app/src/main/java/com/application/profee/initializer/ProfeeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profee.app/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.app/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +60,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/profee.product/src/main/java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -71,7 +79,7 @@
       <recent name="com.application.profee.initializer" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProfeeProductApplication">
+  <component name="RunManager" selected="Application.ProfeeApplication">
     <configuration name="ProfeeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.application.profee.initializer.ProfeeApplication" />
       <module name="profee.app" />
@@ -124,9 +132,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProfeeApplication" />
         <item itemvalue="Application.ProfeeProductApplication" />
         <item itemvalue="Application.ProfeeFeedbackApplication" />
-        <item itemvalue="Application.ProfeeApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631371470391</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added proxy conf to the client application">
+      <created>1631372524163</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1631372524163</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,10 +181,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Segregated into three applications" />
     <MESSAGE value="Migrated entity specific files to corresponding applications" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migrated entity specific files to corresponding applications" />
+    <MESSAGE value="Added proxy conf to the client application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added proxy conf to the client application" />
   </component>
 </project>
