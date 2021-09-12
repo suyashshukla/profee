@@ -1,0 +1,22 @@
+version: '1'
+
+services:
+  profee.eureka:
+    build: profee.eureka
+    ports:
+      - 5000:5000
+
+  profee.app:
+    build: profee.app
+    ports:
+      - 8080:8080
+
+  profee.feedback:
+    build: profee.feedback
+    ports:
+      - 1000:1000
+
+  profee.product:
+    build: profee.product
+    ports:
+      - 2000:2000

@@ -4,20 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51c56c1b-6de9-4017-973d-88f94e82b95c" name="Changes" comment="Added proxy conf to the client application">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="51c56c1b-6de9-4017-973d-88f94e82b95c" name="Changes" comment="Added eureka and zuul proxy">
+      <change afterPath="$PROJECT_DIR$/profee.app/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profee.eureka/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profee.feedback/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profee.product/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profee.app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profee.app/src/main/java/com/application/profee/initializer/ProfeeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/profee.app/src/main/java/com/application/profee/initializer/ProfeeApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profee.app/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.app/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profee.app/src/test/java/com/application/profee/ProfeeApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/profee.feedback/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.feedback/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profee.feedback/src/main/java/com/application/profee/initializer/ProfeeFeedbackApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/profee.feedback/src/main/java/com/application/profee/initializer/ProfeeFeedbackApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profee.feedback/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.feedback/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profee.feedback/src/test/java/com/application/profee/ProfeeApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/profee.product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.product/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profee.product/src/main/java/com/application/profee/initializer/ProfeeProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/profee.product/src/main/java/com/application/profee/initializer/ProfeeProductApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profee.product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profee.product/src/test/java/com/application/profee/ProfeeApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,17 +67,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/profee.eureka" />
+    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="yaml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/profee.product" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Other Repos\profeeApp\profee\profee.product" />
+      <recent name="D:\Other Repos\profeeApp\profee\profee.feedback" />
+      <recent name="D:\Other Repos\profeeApp\profee\profee.eureka" />
       <recent name="D:\Other Repos\profeeApp\profee\profee.product\src\main\java" />
       <recent name="D:\Other Repos\profeeApp\profee\profee.product\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Other Repos\profeeApp\profee\docker-compose.yml" />
       <recent name="D:\Other Repos\profeeApp\profee\profee.product\src\main\java\com\application\profee\initializer" />
       <recent name="D:\Other Repos\profeeApp\profee\profee.feedback\src\main\java\com\application\profee\initializer" />
     </key>
@@ -84,26 +90,13 @@
       <recent name="com.application.profee.initializer" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProfeeApplication">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="ProfeeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.application.profee.initializer.ProfeeApplication" />
       <module name="profee.app" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.application.profee.initializer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProfeeEurekaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.application.profee.ProfeeEurekaApplication" />
-      <module name="profee.eureka" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.application.profee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,12 +141,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="profee.app/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="profee.app/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.profee.app/Dockerfile" />
         <item itemvalue="Application.ProfeeApplication" />
         <item itemvalue="Application.ProfeeFeedbackApplication" />
         <item itemvalue="Application.ProfeeProductApplication" />
-        <item itemvalue="Application.ProfeeEurekaApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631372524163</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added eureka and zuul proxy">
+      <created>1631450258920</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1631450258920</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,6 +224,7 @@
     <MESSAGE value="Segregated into three applications" />
     <MESSAGE value="Migrated entity specific files to corresponding applications" />
     <MESSAGE value="Added proxy conf to the client application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added proxy conf to the client application" />
+    <MESSAGE value="Added eureka and zuul proxy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added eureka and zuul proxy" />
   </component>
 </project>
