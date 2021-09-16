@@ -1,0 +1,97 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: profee-eureka
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+      serviceName: profee-eureka
+ template:
+  metadata:
+    labels:
+      serviceName: profee-eureka
+  spec:
+   containers:
+    - image: prashikshit/profee:profee.eureka
+      imagePullPolicy: "Always"
+      name: profee-eureka
+      ports:
+       - containerPort: 5000
+      resources: {}
+   restartPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: profee-app
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+      serviceName: profee-app
+ template:
+  metadata:
+     labels:
+        serviceName: profee-app
+  spec:
+   containers:
+    - image: prashikshit/profee:profee.app
+      imagePullPolicy: "Always"
+      name: profee-app
+      ports:
+       - containerPort: 8080
+      resources: {}
+   restartPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: profee-feedback
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+      serviceName: profee-feedback
+ template:
+  metadata:
+    labels:
+      serviceName: profee-feedback
+  spec:
+   containers:
+    - image: prashikshit/profee:profee.feedback
+      imagePullPolicy: "Always"
+      name: profee-feedback
+      ports:
+       - containerPort: 1000
+      resources: {}
+   restartPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: profee-product
+spec:
+ replicas: 1
+ selector:
+    matchLabels:
+        serviceName: profee-product
+ template:
+  metadata:
+    labels:
+      serviceName: profee-product
+  spec:
+   containers:
+    - image: prashikshit/profee:profee.product
+      imagePullPolicy: "Always"
+      name: profee-product
+      ports:
+       - containerPort: 2000
+      resources: {}
+   restartPolicy: Always

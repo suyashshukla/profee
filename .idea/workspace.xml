@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51c56c1b-6de9-4017-973d-88f94e82b95c" name="Changes" comment="Added eureka and zuul proxy">
-      <change afterPath="$PROJECT_DIR$/profee.app/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profee.eureka/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profee.feedback/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profee.product/Dockerfile" afterDir="false" />
+    <list default="true" id="51c56c1b-6de9-4017-973d-88f94e82b95c" name="Changes" comment="Added ocker support">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profee.app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profee.app/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.app/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profee.app/src/test/java/com/application/profee/ProfeeApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profee.feedback/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.feedback/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profee.feedback/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.feedback/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profee.feedback/src/test/java/com/application/profee/ProfeeApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profee.product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.product/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profee.product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/profee.product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profee.product/src/test/java/com/application/profee/ProfeeApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="eureka" />
+        <entry key="$PROJECT_DIR$" value="docker" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,7 +81,7 @@
       <recent name="com.application.profee.initializer" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+  <component name="RunManager" selected="Docker.profee.app/Dockerfile">
     <configuration name="ProfeeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.application.profee.initializer.ProfeeApplication" />
       <module name="profee.app" />
@@ -149,20 +140,63 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="profee.app/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+    <configuration name="profee.app/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
+          <option name="imageTag" value="prashikshit/profee:profee.app" />
           <option name="buildOnly" value="true" />
           <option name="sourceFilePath" value="profee.app/Dockerfile" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="profee.eureka/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="prashikshit/profee:profee.eureka" />
+          <option name="buildOnly" value="true" />
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="profee.eureka/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="profee.feedback/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="prashikshit/profee:profee.feedback" />
+          <option name="buildOnly" value="true" />
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="profee.feedback/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="profee.product/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="prashikshit/profee:profee.product" />
+          <option name="buildOnly" value="true" />
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="profee.product/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.ProfeeApplication" />
+      <item itemvalue="Application.ProfeeFeedbackApplication" />
+      <item itemvalue="Application.ProfeeProductApplication" />
+      <item itemvalue="Docker.profee.eureka/Dockerfile" />
+      <item itemvalue="Docker.profee.feedback/Dockerfile" />
+      <item itemvalue="Docker.profee.product/Dockerfile" />
+      <item itemvalue="Docker.profee.app/Dockerfile" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.profee.app/Dockerfile" />
         <item itemvalue="Application.ProfeeApplication" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Application.ProfeeFeedbackApplication" />
         <item itemvalue="Application.ProfeeProductApplication" />
       </list>
@@ -205,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631450258920</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added ocker support">
+      <created>1631470425970</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1631470425970</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +266,7 @@
     <MESSAGE value="Migrated entity specific files to corresponding applications" />
     <MESSAGE value="Added proxy conf to the client application" />
     <MESSAGE value="Added eureka and zuul proxy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added eureka and zuul proxy" />
+    <MESSAGE value="Added ocker support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ocker support" />
   </component>
 </project>

@@ -19,7 +19,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://192.168.29.97:5000/eureka}
+      defaultZone: ${EUREKA_URI:http://profee-eureka:5000/eureka}
   instance:
     preferIpAddress: true
 

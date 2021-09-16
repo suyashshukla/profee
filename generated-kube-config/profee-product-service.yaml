@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: profee-product
+  name: profee-product
+spec:
+  ports:
+  - name: "2000"
+    port: 2000
+    targetPort: 2000
+  selector:
+    io.kompose.service: profee-product
+status:
+  loadBalancer: {}
